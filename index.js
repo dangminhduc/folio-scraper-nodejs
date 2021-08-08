@@ -32,6 +32,10 @@ app.get('/:theme', (req, res) => {
   });
 });
 
+app.get('*', function(req, res) {
+  res.status(404).json('You shall not pass!');
+});
+
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });
